@@ -15,6 +15,7 @@ struct Color {
 //Start of main()
 int main()
 {
+    const int WIDTH = 10;
     srand(time(0));
 
     Color test1;
@@ -35,6 +36,12 @@ int main()
         clist.push_back(t);
     }
 
-    cout << clist[0].red << setw(10) << clist[0].blue << setw(10) << clist[0].green << endl;
+    //Print out the whole list
+    cout << "Color#" << setw(WIDTH) << "R value" << setw(WIDTH) << "G value" << setw(WIDTH) << "B value" << endl;
+    cout << "------" << setw(WIDTH) << "-------" << setw(WIDTH) << "-------" << setw(WIDTH) << "-------" << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout << setw(5) << i+1 << setw(WIDTH) << clist[i].red << setw(WIDTH) << clist[i].blue << setw(WIDTH) << clist[i].green << endl;
+    }
 }
 //End of main()
